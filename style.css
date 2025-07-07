@@ -1,0 +1,231 @@
+/* =========================
+   CSS VARIABLES AND THEME
+   ========================= */
+:root {
+    --color-bg: #0f2027;
+    --color-bg-gradient: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+    --color-primary: #00c3ff;
+    --color-primary-dark: #007aa3;
+    --color-success: #28a745;
+    --color-error: #e74c3c;
+    --color-white: #ffffff;
+    --color-light: #f1f1f1;
+    --text-color: #ecf0f1;
+    --radius: 12px;
+    --shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    --transition-fast: 0.3s ease;
+    --transition-smooth: 0.5s ease;
+}
+
+/* =========================
+   GLOBAL STYLES
+   ========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--color-bg-gradient);
+    color: var(--text-color);
+    padding: 40px;
+    min-height: 100vh;
+    background-attachment: fixed;
+}
+
+/* =========================
+   MAIN CONTAINER
+   ========================= */
+.container {
+    max-width: 960px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(10px);
+    animation: fadeInUp 0.8s ease;
+}
+
+h1, h2 {
+    text-align: center;
+    color: var(--color-white);
+    margin-bottom: 20px;
+}
+
+/* =========================
+   FORM STYLES
+   ========================= */
+.user-form-section {
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 6px;
+    display: block;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: var(--radius);
+    font-size: 1em;
+    transition: box-shadow var(--transition-fast);
+}
+
+input:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 8px var(--color-primary-dark);
+}
+
+/* =========================
+   MESSAGE BOX
+   ========================= */
+.message-box {
+    display: none;
+    padding: 12px;
+    border-radius: var(--radius);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* =========================
+   BUTTON STYLES
+   ========================= */
+.button-group {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.button-group button {
+    flex: 1;
+    padding: 12px 24px;
+    border: none;
+    border-radius: var(--radius);
+    font-size: 1em;
+    cursor: pointer;
+    background: var(--color-primary);
+    color: white;
+    transition: background var(--transition-fast), transform var(--transition-fast);
+}
+
+.button-group button:hover {
+    background: var(--color-primary-dark);
+    transform: translateY(-2px);
+}
+
+/* =========================
+   TABLE STYLES
+   ========================= */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+thead {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+th, td {
+    padding: 14px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    color: var(--color-white);
+    text-align: left;
+}
+
+tr {
+    animation: scaleIn 0.4s ease;
+}
+
+tr:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.edit-btn, .delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    margin-right: 8px;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.edit-btn:hover {
+    color: #00c3ff;
+    transform: scale(1.2);
+}
+
+.delete-btn:hover {
+    color: #e74c3c;
+    transform: scale(1.2);
+}
+
+/* =========================
+   ANIMATIONS
+   ========================= */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* =========================
+   RESPONSIVE TABLE
+   ========================= */
+@media (max-width: 600px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tr {
+        margin-bottom: 15px;
+        padding: 10px;
+    }
+
+    td {
+        padding-left: 50%;
+        position: relative;
+    }
+
+    td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        font-weight: bold;
+        color: var(--color-primary);
+    }
+}
