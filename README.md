@@ -1,6 +1,10 @@
 # 📘 User Management API (Spring Boot + JPA + PostgreSQL)
 
 A robust and scalable RESTful API for managing users using **Spring Boot 3**, **Spring Data JPA**, and **PostgreSQL**. This backend project supports full CRUD operations, validations, pagination, and testing with an in-memory H2 database.
+---
+<img src="https://github.com/user-attachments/assets/35dc4f3f-a48c-461d-adc0-24d26b6d5909" width="400" alt="Image"/>
+<img src="https://github.com/user-attachments/assets/22fda001-8a4f-483f-be52-3e73bcdac3d1" width="400" alt="Image2"/>
+
 
 ---
 
