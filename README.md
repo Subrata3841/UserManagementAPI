@@ -157,6 +157,10 @@ UserManagementAPI/
 ├── test/               # JUnit + MockMvc test cases
 └── UsermanagementapiApplication.java
 ```
+## 🖥️ Frontend Integration
+
+View the frontend documentation here: [frontendReaddme.md](https://github.com/Subrata3841/UserManagementAPI/blob/frontend-ui/frontendReaddme.md)
+
 
 ## 🧹 .gitignore (Recommended)
 
