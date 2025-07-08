@@ -159,7 +159,7 @@ UserManagementAPI/
 ```
 ## 🖥️ Frontend Integration
 
-View the frontend documentation here: [frontendReaddme.md](https://github.com/Subrata3841/UserManagementAPI/blob/frontend-ui/frontendReaddme.md)
+View the frontend documentation here: [frontendReaddme.md](https://github.com/Subrata3841/UserManagementAPI/tree/frontend-ui?tab=readme-ov-file)
 
 
 ## 🧹 .gitignore (Recommended)
